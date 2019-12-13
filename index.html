@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <title>pay nic bovee</title>
+</head>
+<body>
+    <main>
+        <h1>pay nic bovee<span class="dollhair"> $</span></h1>
+        <div class="pay">
+                <div class="pay__links">
+                    <a href="https://www.paypal.me/nicbovee">Paypal</a>
+                    <a href="https://cash.app/$nicbovee">Square Cash</a>
+                    <a href="https://venmo.com/code?user_id=2050504217591808002">Venmo</a>
+                </div>
+                <ul>
+                    
+                    <li class="crypto" data-clipboard-text="1EvULEs4QJXjr2Z59dg9ZGwMB3z2Kwz9dx" id="bitcoin">
+                        <h3>Bitcoin</h3>
+                        <p>1EvULEs4QJXjr2Z59dg9ZGwMB3z2Kwz9dx</p>
+                    </li>
+                    <li class="crypto" data-clipboard-text="0x048251Fc8D554c3912f8f90FCdEC68d296a74f65" id="ethereum">
+            
+                        <h3>Ethereum</h3>
+                        <p>0x048251Fc8D554c3912f8f90FCdEC68d296a74f65</p>
+                    </li>
+                    <li class="crypto" data-clipboard-text="qz5vwrxssmj56yk0edlvxqpm3jxvghng8vluclku9u" id="bcash">
+            
+                        <h3>Bitcoin Cash</h3>
+                        <p>qz5vwrxssmj56yk0edlvxqpm3jxvghng8vluclku9u</p>
+                    </li>
+                    <li class="crypto" data-clipboard-text="MSyDKoTJzwXs5muDPDZqMvVkVmwpy63BPb" id="litecoin">
+                        <h3>Litecoin</h3>
+                        <p>MSyDKoTJzwXs5muDPDZqMvVkVmwpy63BPb</p>
+                    </li>
+                </ul>
+        </div>
+    </main>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var btns = document.querySelectorAll('.crypto');
+    var clipboard = new ClipboardJS(btns);
+    var id = null;
+    var lastClick = null;
+    var timeout = null;
+
+    clipboard.on('success', function(e) {
+
+        id && deleteElement(id);
+        timeout && window.clearTimeout(timeout);
+
+        var node = document.createElement("P");
+        id = new Date().getTime();    
+        node.setAttribute("id", id);
+        node.classList.add('animated', 'fadeInUp', 'copylink--success')
+        node.innerHTML = "Key copied!";
+        var ref = document.getElementById(e.trigger.id)
+        ref.parentNode.insertBefore(node, ref.nextSibling);
+        lastClick = e.trigger.id;
+
+        timeout = setTimeout(function(){ 
+            deleteElement(id);
+        }, 3000);
+
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
+    function deleteElement(id){
+        var element = document.getElementById(id);
+        if(element)
+            element.parentNode.removeChild(element);
+    }
+</script>
