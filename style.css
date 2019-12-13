@@ -12,7 +12,10 @@
         background: #52bf52;
         border: none !important;
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 2.5rem 2.5rem;
+
     }
     main {
         padding: 15px;
@@ -24,7 +27,18 @@
     }
 
     main {
-        padding: 15px;
+        padding: 25px !important;
+    }
+    .pay__links a {
+        margin-top: 1rem !important;
+        text-align: center;
+        background: #52bf52;
+        border: none !important;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 2.5rem 2.5rem !important;
+
     }
 }
 
@@ -115,6 +129,10 @@ a {
 }
 .crypto p {
     font-family: monospace;
+    font-size: 1.4rem;
+}
+.crypto h3 {
+    font-size: 1rem;
 }
 .dollhair {
     font-size: 1.2rem;
