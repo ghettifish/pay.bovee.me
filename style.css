@@ -2,9 +2,25 @@
     :root {
         font-size: 9px;
     }
+    .pay__links {
+        flex-direction: column !important;
+    }
+    .pay__links a {
+        margin-top: 1rem !important;
+        text-align: center;
+        background: #52bf52;
+        border: none !important;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+    main {
+        padding: 15px;
+    }
 }
 @media only screen and (max-width: 396px) {
-
+    :root {
+        font-size: 7px;
+    }
     main {
         padding: 15px;
     }
@@ -62,8 +78,22 @@ a {
 
 .pay__links a {
     border: solid 1px #9e9d9d;
-    padding: .8rem 1.2rem;
+    padding: 1rem 1.5rem;
     border-radius: 4px;
+    text-align: center;
+    background: #52bf52;
+    border: none !important;
+    color: #fff;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    font-weight: 100;
+    transition: all ease-in-out .2s;
+}
+.pay__links a:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.2);
+
+
 }
 .pay ul {
     margin-block-start: 0;
