@@ -48,6 +48,10 @@
         font-family: monospace;
         font-size: 1.8rem !important;
     }
+    .copylink--success {
+        font-size: 1.4rem;
+    
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -157,6 +161,8 @@ a {
 .copylink--success{
     padding-top: .4rem;
     color: #86f186;
+    font-size: 1.2rem;
+
 }
 
 @keyframes fadeInUp {
