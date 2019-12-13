@@ -1,12 +1,12 @@
 @media only screen and (max-width: 536px) {
     :root {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 @media only screen and (max-width: 396px) {
 
     main {
-        padding: 25px ;
+        padding: 15px;
     }
 }
 
